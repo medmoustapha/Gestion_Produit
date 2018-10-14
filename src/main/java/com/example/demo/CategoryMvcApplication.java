@@ -11,7 +11,7 @@ import com.example.demo.entitie.Produit;
 import ch.qos.logback.core.net.SyslogOutputStream;
 
 @SpringBootApplication
-@ComponentScan(basePackages= {"com.example.web"})
+
 public class CategoryMvcApplication {
 	
 	public static void main(String[] args) {

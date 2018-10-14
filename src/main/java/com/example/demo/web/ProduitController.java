@@ -1,4 +1,4 @@
-package com.example.web;
+package com.example.demo.web;
 
 import javax.print.attribute.standard.PageRanges;
 import javax.validation.Valid;
