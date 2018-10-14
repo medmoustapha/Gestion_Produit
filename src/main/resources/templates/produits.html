@@ -33,7 +33,7 @@
 			   <td th:text="${p.quantite}"></td>
 			   <td>
 			       <a th:href="@{/admin/edit(id=${p.id})}"><button class="btn btn-default btn-xs btn-detail">Edit</button></a>
-			       <a onClick="return confirm('Etes vous sure?')" th:href="@{/admin/delete(id=${p.id})}"><button class="btn btn-danger btn-xs btn-delete">Delete</button></a>
+			       <a onClick="return confirm('Etes vous sure?')" th:href="@{/admin/delete(id=${p.id},mc=${mc},page=${pageCourante},size=${size})}"><button class="btn btn-danger btn-xs btn-delete">Delete</button></a>
 			   </td>
 		    
 		   </tr>
@@ -44,7 +44,7 @@
 	<div class="container">
 		<div>
 		 <ul class="nav nav-pills">
-			<li th:class="${p}==${status.index}?'active':''" th:each="pa,status:${pages}" >
+			<li th:class="${pageCourante}==${status.index}?'active':''" th:each="pa,status:${pages}" >
 				<a th:href="@{/user/index(page=${status.index},size=${size},mc=${mc})}" th:text="${status.index}"></a>
 			</li>
 		 </ul>

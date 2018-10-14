@@ -33,14 +33,15 @@ public class ProduitController {
 		model.addAttribute("pages",pages);
 		model.addAttribute("listeProduits",produits.getContent());
 		model.addAttribute("size",s);
-		model.addAttribute("p",p);
+		model.addAttribute("pageCourante",p);
 		model.addAttribute("mc",mc);
 		return "produits";
 	}
 	@RequestMapping(value="/admin/delete",method=RequestMethod.GET)
-	public String delete(Long id){
+	public String delete(Long id ,String mc ,int page,int size){
 		produitRepository.delete(id);
-		return "redirect:/user/index";
+		//System.out.println(mc );
+		return "redirect:/user/index?page="+page+"&size="+size+"&mc="+mc;
 	}
 	@RequestMapping(value="/admin/edit",method=RequestMethod.GET)
 	public String edit(Model model,Long id){
