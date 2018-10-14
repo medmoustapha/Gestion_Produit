@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+            layout:decorator="Layout">
+<head>
+<meta charset="utf-8"/>
+<title>Produits</title>
+<link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css"
+ th:href="@{css/bootstrap.min.css}"/>
+</head>
+<body>
+   <div layout:fragment="content">
+	<div class="container">
+	  <div class="panel panel-primary">
+		       <div class="panel-heading">Erreur d'authentifiacation</div>
+			   <div class="panel-body">
+				   <h3 class="red">Vous n'est pas autorisé a accéder a cette ressource</h3>
+			  </div>
+	  </div>
+	</div>
+  </div>
+</body>
+</html>
